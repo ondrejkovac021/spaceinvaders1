@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdmv7g5tvmbe2"]
+
+[ext_resource type="Script" path="res://shot.gd" id="1_q31bf"]
+[ext_resource type="Texture2D" uid="uid://dm8k3pdm3jcu8" path="res://strela1-removebg-preview.png" id="2_jnx67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fssi7"]
+size = Vector2(3.75, 13.5625)
+
+[node name="bullet" type="Node2D"]
+
+[node name="shot" type="CharacterBody2D" parent="."]
+script = ExtResource("1_q31bf")
+
+[node name="Sprite2D" type="Sprite2D" parent="shot"]
+position = Vector2(2.38419e-07, -7)
+scale = Vector2(0.0485967, 0.0666636)
+texture = ExtResource("2_jnx67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shot"]
+position = Vector2(-0.125, -7.21875)
+shape = SubResource("RectangleShape2D_fssi7")

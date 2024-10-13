@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwe5yw3pbjpvd"]
+
+[ext_resource type="Script" path="res://raketa.gd" id="1_pkkim"]
+[ext_resource type="Texture2D" uid="uid://ck4j0ejvxvfep" path="res://raketa.png" id="2_li7hf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvdix"]
+size = Vector2(45, 40.1875)
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_pkkim")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -5)
+scale = Vector2(0.1465, 0.12775)
+texture = ExtResource("2_li7hf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.5, -9.90625)
+shape = SubResource("RectangleShape2D_mvdix")

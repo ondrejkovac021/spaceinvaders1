@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdh1acur5vbq2"]
+
+[ext_resource type="PackedScene" uid="uid://b2bnivm3eadjs" path="res://wall.tscn" id="1_8f5uq"]
+[ext_resource type="PackedScene" uid="uid://bwe5yw3pbjpvd" path="res://player.tscn" id="2_4twww"]
+[ext_resource type="PackedScene" uid="uid://kqvyt12wlhvq" path="res://alien.tscn" id="3_nw6wt"]
+[ext_resource type="PackedScene" uid="uid://12wm5smef3dp" path="res://alien_1.tscn" id="4_o5bvi"]
+
+[node name="world" type="Node2D"]
+
+[node name="wall" parent="." instance=ExtResource("1_8f5uq")]
+position = Vector2(-32, 237)
+
+[node name="wall2" parent="." instance=ExtResource("1_8f5uq")]
+position = Vector2(1567, 182)
+
+[node name="player" parent="." instance=ExtResource("2_4twww")]
+position = Vector2(588, 859)
+
+[node name="alien" parent="." instance=ExtResource("3_nw6wt")]
+position = Vector2(410, 86)
+
+[node name="alien2" parent="." instance=ExtResource("3_nw6wt")]
+position = Vector2(356, 87)
+
+[node name="alien1" parent="." instance=ExtResource("4_o5bvi")]
+position = Vector2(459, 86)
